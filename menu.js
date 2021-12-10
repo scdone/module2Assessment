@@ -93,7 +93,7 @@ console.log(price)
 
 let category = pizza.category
 
-console.log(category)
+// console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
