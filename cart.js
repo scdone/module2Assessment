@@ -35,8 +35,8 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
-
+const summedPrice = cart.reduce((acc, curr) => acc + curr.price, 0) 
+console.log(summedPrice)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -54,6 +54,13 @@ const cart = [
 */
 
 //CODE HERE
+
+function calcFinalPrice (cartTotal, couponValue, tax) {
+    let finalPrice = ((cartTotal + (cartTotal* tax) - couponValue))
+    return finalPrice
+}
+
+calcFinalPrice(100, 20, .10)
 
 
 
@@ -82,9 +89,20 @@ const cart = [
 
 */
 
+// A restuarant would want to know the customer's name to identify them, their email to send a confirmation, 
+// their phone number to contact them if there is an issue with the order, and an order number associated with 
+// the customer to link the customer and their order together (order is stored in different object). 
+
 /*
     Now, create a customer object following your own
     guidelines.
 */
 
 //CODE HERE
+
+let customer = {
+    name: "Sally",
+    email: "SallyProForce@gmail.com",
+    phoneNumber: "480-999-9999",
+    orderNumber: 101  
+}
