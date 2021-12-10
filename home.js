@@ -60,8 +60,8 @@ const canWeDeliver = (zipcode) => {
     }
 
 
-    canWeDeliver(85203)
-    canWeDeliver(90210)
+    // canWeDeliver(85203)
+    // canWeDeliver(90210)
 
     // (function below can be used for other arrays as well, takes in two arguments)
 
@@ -73,6 +73,7 @@ const canWeDeliver = (zipcode) => {
 
 
 // canWeDeliver(deliveryAreaZipCodes, 85203)
+
 
 /* 
     Problem 2 Continued
@@ -92,6 +93,21 @@ const canWeDeliver = (zipcode) => {
 */
 
 // CODE HERE
+
+const canWeDeliver2 = (zipcode) => {
+    for (let i = 0; i < deliveryAreaZipCodes.length; i++){
+        if(deliveryAreaZipCodes[i] === zipcode){
+            return `You are in our delivery zone!`
+        } else {
+            return `Sorry, we can't deliver to that address.`
+        }
+    }
+}
+
+console.log(canWeDeliver2(85203))
+console.log(canWeDeliver2(90210))
+
+
 
 
 //////////////////PROBLEM 3////////////////////
@@ -118,6 +134,7 @@ const deals = [
     }
 ]
 
+
 /*
     The owner has decided to take the 15% off
     deal down to 10%.
@@ -129,6 +146,8 @@ const deals = [
 
 //CODE HERE
 
+deals[0].title = deals[0].title.replace(`15%`, `10%`)
+console.log(deals)
 
 
 /*
@@ -145,3 +164,7 @@ const deals = [
 */
 
 //CODE HERE
+
+deals[1].desc = deals[1].desc.replace(`March`, `April`).trim()
+
+console.log(deals)
