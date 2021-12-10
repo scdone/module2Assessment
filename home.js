@@ -23,7 +23,9 @@
 
 //CODE HERE
 
+const greetUser = (username) => `Welcome back,` + ` ` + username;
 
+console.log(greetUser(`Andrew`))
 
 
 
@@ -51,7 +53,26 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
 
+const canWeDeliver = (zipcode) => {
+    if (deliveryAreaZipCodes.includes(zipcode)) {
+        console.log(`You're in our delivery zone!`)
+    } else {console.log(`Sorry, we don't deliver there yet.`)}
+    }
 
+
+    canWeDeliver(85203)
+    canWeDeliver(90210)
+
+    // (function below can be used for other arrays as well, takes in two arguments)
+
+// const canWeDeliver = (array, num) => {
+//     if (array.includes (num)) {
+//         console.log(`You're in our delivery zone!`)
+//     } else {console.log(`Sorry, we don't deliver there yet.`)}
+//     }
+
+
+// canWeDeliver(deliveryAreaZipCodes, 85203)
 
 /* 
     Problem 2 Continued
