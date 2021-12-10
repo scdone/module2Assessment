@@ -168,7 +168,7 @@ let foodArr = [
 
 //CODE HERE
 
-const filteredFood = foodArr.filter(item => item.tags.includes(`greasy`))
+const filteredFood = foodArr.filter(item => item.tags.includes(`street food`))
 console.log(filteredFood)
 
 
